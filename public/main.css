@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2? famille=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 7rem;
+}
+
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.3rem;
+  margin: 0;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.loader {
+  display: grid;
+  place-items: center;
+  background-color: #ff79da;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opasearch: 1;
+  animation: disappear 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+.loader i {
+  color: #99e2d0;
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.search i {
+  font-size: 1.5rem;
+}
+
+.search h2 {
+  font-size: 1rem;
+}
+
+.explorer {
+  text-align: center;
+  margin: 2rem;
+}
+
+.explorer h2 {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.explorer p {
+  font-size: 1rem;
+}
+
+.explorer button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms;
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+
+.explorer button:hover {
+  transform: scale(1.02);
+  opasearch: 0.9;
+}
+
+.guide {
+  counter-reset: steps;
+  margin-bottom: 2rem;
+}
+
+.guide ol {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .guide ol {
+    flex-direction: column;
+  }
+}
+.guide li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  background-color: #f6f6f6;
+  padding: 1.5rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+}
+
+.guide li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+}
+
+.guide li:hover {
+  transform: scale(1.02);
+  background-color: #f2eafb;
+}
+
+.guide li:hover i::before {
+  color: #9356dc;
+}
+
+.guide li i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.5rem;
+}
+
+#accueil .menus {
+  background-color: #f6f6f6;
+  margin-bottom: 2rem;
+}
+
+#accueil .menus .menus-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1000px) {
+  #accueil .menus .menus-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#accueil .menus .menus-cards .new {
+  position: relative;
+}
+
+#accueil .menus .menus-cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+
+#accueil .menus .card__image {
+  height: 15rem;
+  border-radius: 1rem 1rem 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+#accueil .menus .card__image-1 {
+  background-image: url("../assets/menu-1.jpg");
+}
+
+#accueil .menus .card__image-2 {
+  background-image: url("../assets/menu-2.jpg");
+}
+
+#accueil .menus .card__image-3 {
+  background-image: url("../assets/menu-3.jpg");
+}
+
+#accueil .menus .card__image-4 {
+  background-image: url("../assets/menu-4.jpg");
+}
+
+#accueil .menus .card-description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+
+#accueil .menus .card-description::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opasearch: 1;
+  transition: all 200ms ease-in-out;
+}
+
+#accueil .menus .card-description::after {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opasearch: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+}
+
+#accueil .menus .card-description:hover::after {
+  opasearch: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+#accueil .menus .card-description h3,
+#accueil .menus .card-description p {
+  padding: 0.3rem;
+}
+
+#miam-miam header:hover::before {
+  transform: translateY(-50%) scale(1.2);
+}
+
+#miam-miam header::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  transition: transform 200ms;
+}
+
+#miam-miam .banner img {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+#miam-miam .resto-title {
+  margin-top: -2rem;
+}
+
+#miam-miam .resto-title h2 {
+  font-family: "Shrikhand", "cursive";
+  padding: 2rem 1rem;
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+}
+
+#miam-miam .resto-title h2::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opasearch: 1;
+  transition: all 200ms ease-in-out;
+}
+
+#miam-miam .resto-title h2::after {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opasearch: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+}
+
+#miam-miam .resto-title h2:hover::after {
+  opasearch: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+#miam-miam .resto-main {
+  padding: 0 1rem;
+}
+
+#miam-miam .menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1000px) {
+  #miam-miam .menus {
+    grid-template-columns: 1fr;
+  }
+}
+#miam-miam .menus h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+#miam-miam .menus h3::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99e2d0;
+}
+
+#miam-miam .menus .menus-family {
+  overflow: hidden;
+}
+
+#miam-miam .menus .menus-family .menu-item {
+  display: flex;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0.5rem;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+
+#miam-miam .menus .menus-family .menu-item:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+#miam-miam .menus .menus-family .menu-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+#miam-miam .menus .menus-family .menu-item:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+#miam-miam .menus .menus-family .menu-item .menu-item-price {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+#miam-miam .menus .menus-family .menu-item .menu-item-description {
+  padding: 1rem;
+  overflow: hidden;
+}
+
+#miam-miam .menus .menus-family .menu-item .menu-item-description h4,
+#miam-miam .menus .menus-family .menu-item .menu-item-description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#miam-miam .menus .menus-family .menu-item .menu-item-look {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #99e2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+
+#miam-miam .menus .menus-family .menu-item .menu-item-look i {
+  display: grid;
+  place-items: center;
+  background: white;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  color: #99e2d0;
+}
+
+#miam-miam .menus .menus-family .menu-item:hover {
+  cursor: pointer;
+}
+
+#miam-miam .menus .menus-family .menu-item:hover .menu-item-look {
+  margin-right: 0;
+}
+
+#miam-miam .menus .menus-family .menu-item:hover i {
+  animation: quarterspin 0.5s ease-in-out;
+}
+
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+#miam-miam section.order {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+
+#miam-miam section.order button {
+  color: white;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  transition: transform 200ms;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+}
+
+#miam-miam section.order button:hover {
+  transform: scale(1.02);
+  opasearch: 0.9;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+footer h2 {
+  font-family: "Shrikhand", "sans-serif";
+  font-weight: 500;
+  padding: 1rem 0;
+}
+
+footer p {
+  padding: 0.2rem;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+/*# sourceMappingURL=main.css.map */
