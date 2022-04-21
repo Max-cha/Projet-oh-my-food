@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2? famille=Shrikhand&display=swap");
+/*bonjour*/
 *,
 ::before,
 ::after {
@@ -50,7 +51,6 @@ a {
   left: 0;
   right: 0;
   z-index: 1;
-  opasearch: 1;
   animation: disappear 2s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
@@ -116,7 +116,6 @@ a {
 
 .explorer button:hover {
   transform: scale(1.02);
-  opasearch: 0.9;
 }
 
 .guide {
@@ -256,7 +255,7 @@ a {
   color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
-  opasearch: 1;
+  opacity: 1;
   transition: all 200ms ease-in-out;
 }
 
@@ -277,14 +276,14 @@ a {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  opasearch: 0;
+  opacity: 0;
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 
 #accueil .menus .card-description:hover::after {
-  opasearch: 1;
   transform: translateY(-50%) scale(1.1);
+  opacity: 1;
 }
 
 #accueil .menus .card-description h3,
@@ -352,7 +351,6 @@ a {
   color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
-  opasearch: 1;
   transition: all 200ms ease-in-out;
 }
 
@@ -373,13 +371,11 @@ a {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  opasearch: 0;
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 
 #miam-miam .resto-title h2:hover::after {
-  opasearch: 1;
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -525,7 +521,6 @@ a {
 
 #miam-miam section.order button:hover {
   transform: scale(1.02);
-  opasearch: 0.9;
 }
 
 footer {

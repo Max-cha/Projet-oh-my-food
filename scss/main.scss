@@ -238,6 +238,7 @@ a {
   color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
+  opacity: 1;
   transition: all 200ms ease-in-out;
 }
 #accueil .menus .card-description::after {
@@ -257,11 +258,13 @@ a {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
+  opacity: 0;
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 #accueil .menus .card-description:hover::after {
   transform: translateY(-50%) scale(1.1);
+  opacity: 1;
 }
 #accueil .menus .card-description h3,
 #accueil .menus .card-description p {
