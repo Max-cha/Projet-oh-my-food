@@ -217,52 +217,28 @@ a {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
-}
-#accueil .menus .card-description::before {
-  display: inline-block;
-  position: absolute;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 2rem;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-#accueil .menus .card-description::after {
-  display: inline-block;
-  position: absolute;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 2rem;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
-}
-#accueil .menus .card-description::after:hover {
-  transform: translateY(-50%) scale(1.1);
-  opacity: 1;
-}
+  i{
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .fas{
+    color: transparent;
+    background-image: linear-gradient(rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms;
+   &:hover{
+      opacity: 2;
+    }
+  }
+ }
+
+
+
 #accueil .menus .card-description h3,
 #accueil .menus .card-description p {
   padding: 0.3rem;
@@ -295,7 +271,26 @@ a {
   object-position: center;
 }
 #miam-miam .resto-title {
+  position: relative;
   margin-top: -2rem;
+  i{
+    font-size: 2.5rem;
+    position: absolute;
+    right: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .fas{
+    color: transparent;
+    background-image: linear-gradient(rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms;
+   &:hover{
+      opacity: 2;
+    }
+  }
 }
 #miam-miam .resto-title h2 {
   font-family: "Shrikhand", "cursive";
@@ -306,48 +301,8 @@ a {
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
 }
-#miam-miam .resto-title h2::before {
-  display: inline-block;
-  position: absolute;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 2rem;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: inherit;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition: all 200ms ease-in-out;
-}
-#miam-miam .resto-title h2::after {
-  display: inline-block;
-  position: absolute;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 2rem;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, #9356dc, #ff79da);
-}
-#miam-miam .resto-title h2:hover::after {
-  transform: translateY(-50%) scale(1.1);
-}
+
+
 #miam-miam .resto-main {
   padding: 0 1rem;
 }
