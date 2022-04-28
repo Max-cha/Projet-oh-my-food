@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2? family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2? famille=Shrikhand&display=swap");
-/*OPENCLASSROOMS*/
 *,
 ::before,
 ::after {
@@ -116,6 +114,7 @@ a {
 
 .explorer button:hover {
   transform: scale(1.02);
+  filter: brightness(1.05);
 }
 
 .guide {
@@ -281,7 +280,7 @@ a {
   background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 
-#accueil .menus .card-description:hover::after {
+#accueil .menus .card-description::after:hover {
   transform: translateY(-50%) scale(1.1);
   opacity: 1;
 }
