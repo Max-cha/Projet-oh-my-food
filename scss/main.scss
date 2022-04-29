@@ -274,7 +274,7 @@ a {
   position: relative;
   margin-top: -2rem;
   i{
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     position: absolute;
     right: 3rem;
     top: 50%;
@@ -385,8 +385,8 @@ a {
   display: grid;
   place-items: center;
   background: white;
-  height: 1rem;
-  width: 1rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 1rem;
   color: #99e2d0;
 }
@@ -429,6 +429,7 @@ a {
   }
 #miam-miam section.order button:hover {
     transform: scale(1.02);
+    filter: brightness(1.05)
   }
   
 footer {
